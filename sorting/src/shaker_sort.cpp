@@ -2,7 +2,7 @@
 
 template<typename T>
 void shakerSort(std::vector<T>& arr) {
-    if (arr.empty()) return;  // Проверка на пустой массив
+    if (arr.empty()) return;  
 
     bool swapped = true;
     size_t start = 0;
@@ -11,7 +11,7 @@ void shakerSort(std::vector<T>& arr) {
     while (swapped) {
         swapped = false;
 
-        // Проход слева направо
+
         for (size_t i = start; i < end; ++i) {
             if (arr[i] > arr[i + 1]) {
                 std::swap(arr[i], arr[i + 1]);
@@ -19,12 +19,12 @@ void shakerSort(std::vector<T>& arr) {
             }
         }
 
-        if (!swapped) break;  // Если обменов не было, массив отсортирован
+        if (!swapped) break;  
 
         --end;
         swapped = false;
 
-        // Проход справа налево
+        
         for (size_t i = end; i > start; --i) {
             if (arr[i] < arr[i - 1]) {
                 std::swap(arr[i], arr[i - 1]);
@@ -36,6 +36,6 @@ void shakerSort(std::vector<T>& arr) {
     }
 }
 
-// Явные инстанцирования шаблонов для часто используемых типов
+
 template void shakerSort<int>(std::vector<int>&);
 template void shakerSort<double>(std::vector<double>&);

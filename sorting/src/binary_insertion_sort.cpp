@@ -2,7 +2,7 @@
 
 template<typename T>
 int binarySearch(const std::vector<T>& arr, T key, int start, int end) {
-    if (end <= start) return start;  // Гарантия возврата корректного индекса
+    if (end <= start) return start; 
 
     while (start < end) {
         int mid = start + (end - start) / 2;
